@@ -2,13 +2,10 @@
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
 from database.models import Base
+from config import *
 
 
-DB_USER = "postgres"
-DB_PASS = "123456"
-DB_HOST = "localhost"
-DB_PORT = "5432"
-DB_NAME = "kinoBot"
+
 
 
 # Connection URI
