@@ -375,7 +375,7 @@ async def handle_confirm_channel(callback_query: CallbackQuery,state: FSMContext
         await callback_query.message.edit_text("Bot adminligi tekshirilmadi!",reply_markup=key_admin())
         await state.clear()
     
-async def is_bot_admin(channel_id: int | str, bot: Bot) -> bool:
+async def is_bot_admin(channel_id: any, bot: Bot) -> bool:
     try:
         bot_user = await bot.get_me()
         member = await bot.get_chat_member(chat_id=channel_id, user_id=bot_user.id)
